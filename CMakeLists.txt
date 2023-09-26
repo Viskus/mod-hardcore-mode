@@ -10,6 +10,12 @@ set(SOURCE_FILES
     src/HardcoreMode.h
 )
 
+# Include directories for AzerothCore headers and your module's source directory
+include_directories(
+    ${CMAKE_SOURCE_DIR}/dep/acore/src/server/game
+    ${CMAKE_SOURCE_DIR}/modules/mod-hardcore-mode/src
+)
+
 # Create the module shared library
 add_library(${MODULE_NAME} MODULE ${SOURCE_FILES})
 

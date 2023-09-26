@@ -1,5 +1,5 @@
 #include "HardcoreMode.h"
-#include <Entities/Player/Player.h>
+#include "Player.h"
 #include "Log.h"
 #include "Config.h" // Include the Config.h header
 

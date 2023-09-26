@@ -13,18 +13,16 @@ set(SOURCE_FILES
 add_library(${MODULE_NAME} MODULE ${SOURCE_FILES})
 
 # Include AzerothCore's CMake scripts and target properties
-include(acore-common)
+include_directories(${CMAKE_SOURCE_DIR}/dep/acore/src/server/shared)
+include_directories(${CMAKE_SOURCE_DIR}/dep/acore/src/server/shared/revision_db)
+include_directories(${CMAKE_SOURCE_DIR}/dep/acore/src/server/game)
+include_directories(${CMAKE_SOURCE_DIR}/src/tools/dbc)
 
 # Set module dependencies if any
 set(MODULE_DEPENDENCIES
     AzerothCore::World
     AzerothCore::Game
     AzerothCore::ScriptPCH
-)
-
-# Specify module include directories
-target_include_directories(${MODULE_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
 # Link the module with its dependencies

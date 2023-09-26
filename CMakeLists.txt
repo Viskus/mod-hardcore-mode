@@ -13,12 +13,12 @@ set(SOURCE_FILES
 # Create the module shared library
 add_library(${MODULE_NAME} MODULE ${SOURCE_FILES})
 
-# Link your module with AzerothCore libraries
+# Link your module with AzerothCore libraries (static linking)
 target_link_libraries(${MODULE_NAME}
     PRIVATE
-    AzerothCore::World
-    AzerothCore::Game
-    AzerothCore::ScriptPCH
+    libworld
+    libgame
+    libscript
 )
 
 # Set the installation directory for your module

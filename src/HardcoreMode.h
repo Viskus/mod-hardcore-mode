@@ -1,8 +1,6 @@
 #ifndef HARDCOREMODE_H
 #define HARDCOREMODE_H
 
-#include "Module.h" // Include the Module.h header
-
 class HardcoreModeModule : public Module
 {
 public:

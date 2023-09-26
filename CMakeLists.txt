@@ -12,7 +12,7 @@ set(SOURCE_FILES
 
 # Include directories for AzerothCore headers and your module's source directory
 include_directories(
-    ${CMAKE_SOURCE_DIR}/dep/acore/src/server/game
+    ${AZEROTHCORE_INCLUDE_DIRS} # Include AzerothCore headers
     ${CMAKE_SOURCE_DIR}/modules/mod-hardcore-mode/src
 )
 

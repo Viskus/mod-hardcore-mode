@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Module.h" // Include the Module.h header
+
 class HardcoreModeModule : public Module
 {
 public:

@@ -1,4 +1,5 @@
 #include "HardcoreMode.h"
+#include "Module.h"
 #include "Player.h"
 #include "Log.h"
 #include "Config.h" // Include the Config.h header

@@ -12,8 +12,10 @@ set(SOURCE_FILES
 
 # Include directories for AzerothCore headers and your module's source directory
 include_directories(
-    ${AZEROTHCORE_INCLUDE_DIRS} # Include AzerothCore headers
     ${CMAKE_SOURCE_DIR}/modules/mod-hardcore-mode/src
+    ${AZEROTHCORE_INCLUDE_DIRS}
+    ${CMAKE_SOURCE_DIR}/src/server/game/Entities/Player # Include the directory
+    # Include other directories as needed
 )
 
 # Create the module shared library
